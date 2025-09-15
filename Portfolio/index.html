@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nizar El Hayek - Portfolio</title>
+
+<style>
+/* Global */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0fff0;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: limegreen;
+    z-index: 1000;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: black;
+}
+
+/* Header image with overlay text */
+.header {
+    position: relative;
+    margin-top: 60px;
+}
+
+.header img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2.5em;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px 25px;
+    border-radius: 10px;
+}
+
+/* Profile Image Styling */
+.profile-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    filter: grayscale(20%) brightness(1.1);
+    object-fit: cover;
+}
+
+/* Two-column layout */
+.columns {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    gap: 20px;
+}
+
+.column {
+    width: 45%;
+    background-color: #d6ffd6;
+    padding: 20px;
+    border-radius: 10px;
+    height: 250px;
+    color: #333;
+}
+
+/* Table Styling */
+.table-section {
+    padding: 30px;
+    text-align: center;
+}
+
+table {
+    width: 60%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 2px solid limegreen;
+    padding: 12px;
+}
+
+th {
+    background-color: limegreen;
+    color: white;
+}
+
+/* Paragraph Hover Effect */
+.hover-paragraph {
+    text-align: center;
+    margin: 30px;
+}
+
+.hover-paragraph p {
+    display: inline-block;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hover-paragraph p:hover {
+    background-color: limegreen;
+    color: white;
+}
+
+/* Image overlay fade */
+.image-overlay-fade .container {
+    position: relative;
+    width: 60%;
+    margin: 40px auto;
+}
+
+.image-overlay-fade img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+.image-overlay-fade .overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(50, 205, 50, 0.8);
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    border-radius: 0 0 10px 10px;
+}
+
+.image-overlay-fade .container:hover .overlay {
+    opacity: 1;
+}
+
+/* Video section with text overlay */
+.video-section {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+}
+
+.video-overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: limegreen;
+    font-size: 2em;
+    font-weight: bold;
+    background: rgba(0,0,0,0.5);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+</style>
+</head>
+<body>
+
+    <!-- Fixed Navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Section with Text Overlay on Image -->
+    <header class="header">
+        <img src="https://cdn.pixabay.com/photo/2025/08/11/10/04/mountain-9767919_1280.jpg" alt="Background">
+        <div class="overlay-text">Welcome to Nizar's Portfolio</div>
+    </header>
+
+    <!-- Profile Image -->
+    <section class="profile-section">
+        <img src="https://cdn.pixabay.com/photo/2025/08/08/10/39/garlic-9762451_1280.jpg" alt="garlic" class="profile-img">
+    </section>
+
+    <!-- Two-column layout -->
+    <section id="about" class="columns">
+        <div class="column left">
+            <h2>About Me</h2>
+            <p>I am Nizar El Hayek, a student passionate about web development and creative design.</p>
+        </div>
+        <div class="column right">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML & CSS</li>
+                <li>Pyhton</li>
+                <li>Design</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Table Section -->
+    <section class="table-section">
+        <h2>My Courses</h2>
+        <table>
+            <tr>
+                <th>Course</th>
+                <th>Grade</th>
+            </tr>
+            <tr>
+                <td>HTML</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>Python</td>
+                <td>B+</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Paragraph with Hover -->
+    <section id="gallery" class="hover-paragraph">
+        <p>Hover over this paragraph to see the effect!</p>
+    </section>
+
+    <!-- Image Overlay Fade -->
+    <section class="image-overlay-fade">
+        <div class="container">
+            <img src="https://cdn.pixabay.com/photo/2025/08/11/10/04/mountain-9767919_1280.jpg" alt="Image">
+            <div class="overlay">This is an overlay fade!</div>
+        </div>
+    </section>
+
+    <!-- Autoplay Video with Text Overlay -->
+    <section class="video-section">
+        <div class="video-container">
+            <video autoplay muted loop>
+                <source src="https://cdn.pixabay.com/video/2025/06/24/287510_tiny.mp4" type="video/mp4">
+                Your browser does not support HTML video.
+            </video>
+            <div class="video-overlay-text">Video Overlay</div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Nizar El Hayek. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
